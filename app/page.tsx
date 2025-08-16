@@ -1,10 +1,12 @@
-import { Button } from "@/components/ui/button";
+import HomeBanner from "@/components/banner/home-banner";
+import Container from "@/components/layouts/container";
+
 
 
 export default function Home() {
   return (
-  <Button>
-    Demo Button
-  </Button>
+    <Container className="py-10">
+      <HomeBanner />
+    </Container>
   );
 }
