@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 const HeaderMenu = () => {
   const pathName = usePathname();
   return (
-    <div className="hidden md:inline-flex w-1/3 items-center gap-5 text-sm capitalize font-semibold">
+    <div className="hidden md:inline-flex w-1/3 max-w-fit items-center gap-5 text-sm capitalize font-semibold">
       {headerData?.map((items) => (
         <Link
           key={items?.title}

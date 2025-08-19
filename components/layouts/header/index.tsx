@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import HeaderMenu from "./left-bar/header-menu";
-import Logo from "./central-bar/logo";
 import Container from "../container";
 import MobileMenu from "./left-bar/mobile-menu";
 import SearchBar from "@/components/layouts/header/right-bar/search-bar";
@@ -9,6 +8,8 @@ import CardIcon from "@/components/layouts/header/right-bar/card-icon";
 import { currentUser } from "@clerk/nextjs/server";
 import { ClerkLoaded, SignedIn, SignInButton, UserButton } from "@clerk/nextjs";
 import { ListOrdered } from "lucide-react";
+import FixedLogoHandler from "./central-bar/fixed-logo-handler";
+
 
 const Header = async() => {
   const user = await currentUser()
@@ -18,7 +19,7 @@ const Header = async() => {
         <HeaderMenu />
         <div className="w-auto md:w-1/3 flex items-center justify-center gap-2.5">
           <MobileMenu />
-          <Logo />
+          <FixedLogoHandler />
         </div>
         <div className="w-auto md:w-1/3 flex items-center justify-end gap-5">
           <SearchBar />
